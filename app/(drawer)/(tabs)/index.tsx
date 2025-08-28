@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <View>
       <Text>Home</Text>
+      <Link href="/(login)">Login</Link>
       <Link href="/transfer-money">Transfer Money</Link>
     </View>
   );

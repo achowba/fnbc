@@ -1,42 +1,33 @@
+import { FNBC_LOGO } from '@/constants/assets.constants';
 import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
-import { FNBC_LOGO } from '@/constants/image.constants';
 import { Image } from 'expo-image';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Login = () => {
+const LoginHeader = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View>
-          <Text style={styles.headerTextSmall}>Bank at your finger tips</Text>
-          <Text style={styles.headerTextLarge}>Login Method</Text>
-        </View>
-        <View style={styles.headerImageContainer}>
-          <Image style={styles.headerImage} source={FNBC_LOGO} />
-        </View>
+    <View style={styles.headerContainer}>
+      <View>
+        <Text style={styles.headerTextSmall}>Bank at your finger tips</Text>
+        <Text style={styles.headerTextLarge}>Login Method</Text>
       </View>
-      <View style={styles.formContainer}>
-        <Text>Form</Text>
+      <View style={styles.headerImageContainer}>
+        <Image style={styles.headerImage} source={FNBC_LOGO} />
       </View>
     </View>
   );
 };
 
-export default Login;
-
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.light.primary,
-    flex: 1,
-  },
   headerContainer: {
     alignItems: 'center',
+    backgroundColor: COLORS.light.primary,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingBottom: 30,
+    paddingBottom: 40,
     paddingHorizontal: 20,
+    paddingTop: 80,
   },
   headerTextSmall: {
     color: '#FFFFFF90',
@@ -63,11 +54,6 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
-  formContainer: {
-    backgroundColor: '#FFFFFF',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    flex: 1,
-    padding: 25,
-  },
 });
+
+export default LoginHeader;

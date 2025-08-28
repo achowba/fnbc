@@ -1,3 +1,4 @@
+import LoginHeader from '@/components/login/LoginHeader';
 import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import { useFonts } from 'expo-font';
@@ -19,11 +20,12 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={styles.rootContainer}>
-      <Stack>
+      <Stack initialRouteName="(login)">
         <Stack.Screen
-          name="index"
+          name="(login)"
           options={{
             headerShown: true,
+            header: () => <LoginHeader />,
             headerTitle: '',
             headerShadowVisible: false,
             headerStyle: {
