@@ -1,3 +1,5 @@
+import { COLORS } from '@/constants/colors.constants';
+import { FONTS } from '@/constants/fonts.constants';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
@@ -5,10 +7,10 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    InterBold: require('../assets/fonts/Inter/Inter_24pt-Bold.ttf'),
-    InterLight: require('../assets/fonts/Inter/Inter_24pt-Light.ttf'),
-    InterRegular: require('../assets/fonts/Inter/Inter_24pt-Regular.ttf'),
-    InterSemiBold: require('../assets/fonts/Inter/Inter_24pt-SemiBold.ttf'),
+    [FONTS.inter.bold]: require('../assets/fonts/Inter/Inter_24pt-Bold.ttf'),
+    [FONTS.inter.light]: require('../assets/fonts/Inter/Inter_24pt-Light.ttf'),
+    [FONTS.inter.regular]: require('../assets/fonts/Inter/Inter_24pt-Regular.ttf'),
+    [FONTS.inter.semibold]: require('../assets/fonts/Inter/Inter_24pt-SemiBold.ttf'),
   });
 
   if (!loaded) {
@@ -18,7 +20,17 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={styles.rootContainer}>
       <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="index"
+          options={{
+            headerShown: true,
+            headerTitle: '',
+            headerShadowVisible: false,
+            headerStyle: {
+              backgroundColor: COLORS.light.primary,
+            },
+          }}
+        />
         <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
         <Stack.Screen
           name="transfer-money"

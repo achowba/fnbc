@@ -1,10 +1,11 @@
+import { Link } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 const TransferMoney = () => {
   return (
     <View>
-      <Text>Transfer</Text>
+      <Link href="/">Transfer Money</Link>
     </View>
   );
 };
