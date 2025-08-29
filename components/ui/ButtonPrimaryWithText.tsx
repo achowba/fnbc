@@ -4,13 +4,19 @@ import { Pressable, StyleProp, StyleSheet, Text, TextStyle, ViewStyle } from 're
 
 type ButtonPrimaryProps = {
   children: React.ReactNode;
+  onPress?: () => void;
   buttonStyles?: StyleProp<ViewStyle>;
   textStyles?: StyleProp<TextStyle>;
 };
 
-const ButtonPrimaryWithText = ({ children, buttonStyles, textStyles }: ButtonPrimaryProps) => {
+const ButtonPrimaryWithText = ({
+  children,
+  onPress,
+  buttonStyles,
+  textStyles,
+}: ButtonPrimaryProps) => {
   return (
-    <Pressable style={[styles.buttonPrimary, buttonStyles]}>
+    <Pressable style={[styles.buttonPrimary, buttonStyles]} onPress={onPress!}>
       <Text style={[styles.buttonText, textStyles]}>{children}</Text>
     </Pressable>
   );

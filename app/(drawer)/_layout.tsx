@@ -3,6 +3,10 @@ import { Drawer } from 'expo-router/drawer';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+export const unstable_settings = {
+  initialRouteName: '(tabs)',
+};
+
 const DrawerLayout = () => {
   const router = useRouter();
 

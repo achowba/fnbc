@@ -1,55 +1,67 @@
+import LoginFooter from '@/components/login/LoginFooter';
 import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import TopTabs from '@/layouts/top-tabs.layout';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const LoginTabsLayout = () => {
+export const unstable_settings = {
+  initialRouteName: 'index',
+};
+
+const LoginScreen = () => {
   return (
     <View style={styles.container}>
-      <TopTabs
-        screenOptions={{
-          tabBarStyle: {
-            backgroundColor: '#F8F8F8',
-            borderTopLeftRadius: 25,
-            borderTopRightRadius: 25,
-            elevation: 0,
-            padding: 10,
-            shadowOffset: { width: 0, height: 0 },
-            shadowOpacity: 0,
-            shadowRadius: 0,
-          },
-          tabBarActiveTintColor: COLORS.light.primary,
-          tabBarInactiveTintColor: '#888888',
-          tabBarLabel: ({ focused, children }) => (
-            <Text
-              style={
-                focused
-                  ? [styles.tabBarText, styles.tabBarTextActive]
-                  : [styles.tabBarText, styles.tabBarTextInactive]
-              }
-            >
-              {children}
-            </Text>
-          ),
-        }}
-      >
-        <TopTabs.Screen
-          name="index"
-          options={{
-            tabBarIndicatorStyle: [styles.tabIndicator, styles.qamTab],
-            title: 'Quick Access MPIN',
-          }}
-        />
-        <TopTabs.Screen
-          name="customerid-login"
-          options={{
-            tabBarIndicatorStyle: [styles.tabIndicator, styles.customerIdTab],
-            title: 'Customer ID',
-          }}
-        />
-      </TopTabs>
+      <LoginTabsLayout />
+      <LoginFooter />
     </View>
+  );
+};
+
+const LoginTabsLayout = () => {
+  return (
+    <TopTabs
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: '#F8F8F8',
+          borderTopLeftRadius: 25,
+          borderTopRightRadius: 25,
+          elevation: 0,
+          padding: 10,
+          shadowOffset: { width: 0, height: 0 },
+          shadowOpacity: 0,
+          shadowRadius: 0,
+        },
+        tabBarActiveTintColor: COLORS.light.primary,
+        tabBarInactiveTintColor: '#888888',
+        tabBarLabel: ({ focused, children }) => (
+          <Text
+            style={
+              focused
+                ? [styles.tabBarText, styles.tabBarTextActive]
+                : [styles.tabBarText, styles.tabBarTextInactive]
+            }
+          >
+            {children}
+          </Text>
+        ),
+      }}
+    >
+      <TopTabs.Screen
+        name="index"
+        options={{
+          tabBarIndicatorStyle: [styles.tabIndicator, styles.mpinTab],
+          title: 'Quick Access MPIN',
+        }}
+      />
+      <TopTabs.Screen
+        name="customerid-login"
+        options={{
+          tabBarIndicatorStyle: [styles.tabIndicator, styles.customerIdTab],
+          title: 'Customer ID',
+        }}
+      />
+    </TopTabs>
   );
 };
 
@@ -62,7 +74,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.light.primary,
     height: 5,
   },
-  qamTab: {
+  mpinTab: {
     borderBottomRightRadius: 5,
     borderTopRightRadius: 5,
   },
@@ -85,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginTabsLayout;
+export default LoginScreen;

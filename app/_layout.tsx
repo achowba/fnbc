@@ -6,6 +6,10 @@ import { Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+export const unstable_settings = {
+  initialRouteName: '(login)',
+};
+
 export default function RootLayout() {
   const [loaded] = useFonts({
     [FONTS.inter.bold]: require('../assets/fonts/Inter/Inter_24pt-Bold.ttf'),
