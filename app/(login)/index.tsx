@@ -4,6 +4,7 @@ import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import { DEFAULT_STYLES } from '@/constants/styles.constants';
 import { Link, useRouter } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import SvgUri from 'expo-svg-uri';
 import React from 'react';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
@@ -19,6 +20,7 @@ const Login = () => {
 
   return (
     <>
+      <StatusBar style="light" />
       <View style={styles.container}>
         <View style={styles.formContainer}>
           <OtpInput
@@ -36,15 +38,13 @@ const Login = () => {
             }}
           />
         </View>
-
         <Link href="/customerid-login" asChild>
           <Text style={DEFAULT_STYLES.forgotPasswordText}>Forgot MPIN?</Text>
         </Link>
-
         <View style={styles.buttonContainer}>
           <ButtonPrimaryWithText onPress={handleLoginWithPin}>Login</ButtonPrimaryWithText>
           <Pressable style={styles.faceIDButton} onPress={handleLoginWithPin}>
-            <SvgUri source={ICONS.FACE_ID} height={25} width={25} style={styles.faceIDIcon} />
+            <SvgUri source={ICONS.face_id} height={25} width={25} style={styles.faceIDIcon} />
             <Text style={styles.faceIDButtonText}>Login with Face ID</Text>
           </Pressable>
         </View>
@@ -55,8 +55,6 @@ const Login = () => {
     </>
   );
 };
-
-export default Login;
 
 const styles = StyleSheet.create({
   container: {
@@ -110,3 +108,5 @@ const styles = StyleSheet.create({
     marginVertical: 70,
   },
 });
+
+export default Login;
