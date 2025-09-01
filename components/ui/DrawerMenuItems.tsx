@@ -10,18 +10,6 @@ const ICON_HEIGHT = 35;
 
 const DrawerMenuItems = [
   <Drawer.Screen
-    key="(tabs)"
-    name="(tabs)"
-    options={{
-      headerShown: false,
-      drawerLabel: 'Home',
-      drawerIcon: () => (
-        <MaterialIcons name="home-filled" size={ICON_WIDTH} color={COLORS.light.primary} />
-      ),
-      // drawerItemStyle: { display: 'none' },
-    }}
-  />,
-  <Drawer.Screen
     key="person-management"
     name="person-management"
     options={{
@@ -123,6 +111,18 @@ const DrawerMenuItems = [
       headerTitle: 'Refer',
       headerShown: true,
       drawerIcon: () => <SvgUri source={ICONS.share} width={ICON_WIDTH} height={ICON_HEIGHT} />,
+    }}
+  />,
+  <Drawer.Screen
+    key="(tabs)"
+    name="(tabs)"
+    options={{
+      headerShown: false,
+      drawerLabel: 'Home',
+      drawerIcon: () => (
+        <MaterialIcons name="home-filled" size={ICON_WIDTH} color={COLORS.light.primary} />
+      ),
+      // drawerItemStyle: { display: 'none' },
     }}
   />,
 ];

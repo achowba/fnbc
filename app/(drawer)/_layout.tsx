@@ -1,6 +1,7 @@
 import AccountInfo from '@/components/AccountInfo';
 import Divider from '@/components/ui/Divider';
 import DrawerMenuItems from '@/components/ui/DrawerMenuItems';
+import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import { User } from '@/data/user.data';
 import {
@@ -35,6 +36,7 @@ const DrawerLayout = () => {
       screenOptions={{
         headerTitle: () => null,
         drawerItemStyle: {
+          borderRadius: 5,
           marginTop: 15,
         },
         drawerLabelStyle: {
@@ -43,6 +45,7 @@ const DrawerLayout = () => {
           fontSize: 20,
           marginLeft: 12,
         },
+        drawerActiveTintColor: `${COLORS.light.primary}20`,
       }}
     >
       {DrawerMenuItems}
