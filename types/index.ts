@@ -20,3 +20,10 @@ export type TransactionType = {
   amount: number;
   date: Date;
 }
+
+export type UserType = {
+  name: string;
+  accountNumber: string;
+  accountType: string;
+  accountsCount: number;
+}

@@ -56,7 +56,7 @@ const CardItem = ({ card, isFirstCard, isLastCard }: CardProps) => {
         <View style={styles.cardNumberContainer}>
           <Text style={styles.cardDetailsText}>{card.number}</Text>
           <Pressable onPress={copyCardNumber}>
-            <SvgUri source={ICONS.copy} height={20} width={20} />
+            <SvgUri source={ICONS.copy_white} height={20} width={20} />
           </Pressable>
         </View>
       </View>

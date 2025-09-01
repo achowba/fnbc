@@ -32,6 +32,11 @@ export const DEFAULT_STYLES = StyleSheet.create({
   },
   transactionIcon: {
     transform: [{ rotate: '45deg' }],
+  },
+  blankScreenContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
 

@@ -1,3 +1,4 @@
+import { DEFAULT_STYLES } from '@/constants/styles.constants';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -11,9 +12,7 @@ const Cards = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    ...DEFAULT_STYLES.blankScreenContainer,
   },
 });
 

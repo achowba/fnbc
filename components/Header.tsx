@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#EEE7F3',
     flexDirection: 'row',
-    height: 150,
+    height: 130,
     justifyContent: 'space-between',
     paddingHorizontal: 25,
-    paddingTop: 70,
+    paddingTop: 50,
   },
   titleText: {
     color: COLORS.light.primary,

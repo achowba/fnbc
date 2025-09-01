@@ -3,7 +3,7 @@ export const TRANSACTIONS = [
     id: 1,
     description: 'Received from John',
     amount: 3982.50,
-    date: new Date('2025-08-27 18:26:38')
+    date: new Date('2025-08-27 15:00:00')
   },
   {
     id: 2,

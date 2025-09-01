@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   transactionsContainer: {
-    marginTop: 20,
+    paddingBottom: 25,
   },
 });
 

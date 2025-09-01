@@ -1,11 +1,12 @@
 import { DEFAULT_STYLES } from '@/constants/styles.constants';
+import { Link } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-const Transactions = () => {
+const QuickLoan = () => {
   return (
     <View style={styles.container}>
-      <Text>Transactions</Text>
+      <Link href="/">Quick Loan</Link>
     </View>
   );
 };
@@ -16,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Transactions;
+export default QuickLoan;

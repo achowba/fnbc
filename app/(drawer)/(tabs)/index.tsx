@@ -24,6 +24,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
+    flex: 1,
     paddingTop: 30,
     width: '100%',
   },
