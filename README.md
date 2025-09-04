@@ -22,3 +22,21 @@ In the output, you'll find options to open the app in a
 * [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 * [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 * [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+## Screenshots
+
+### [Login Screen](https://www.figma.com/design/JkiHOcs0jkLp2FtxDMYYlv/Banking--Finance---E-Pay----App-UI--Community-?node-id=2-7740&t=9BHOjfdUlCz6FaU6-0)
+
+![Login Screen](./screenshots/Login_Screen.jpeg)
+
+### [Home Screen](https://www.figma.com/design/JkiHOcs0jkLp2FtxDMYYlv/Banking--Finance---E-Pay----App-UI--Community-?node-id=2-7105&t=9BHOjfdUlCz6FaU6-0)
+
+![Home Screen](./screenshots/Home_Screen.jpeg)
+
+### [Side Menu Screen](https://www.figma.com/design/JkiHOcs0jkLp2FtxDMYYlv/Banking--Finance---E-Pay----App-UI--Community-?node-id=2-7339&t=9BHOjfdUlCz6FaU6-0)
+
+![Side Menu Screen](./screenshots/Side_Menu.jpeg)
+
+### [Transfer Screen](https://www.figma.com/design/JkiHOcs0jkLp2FtxDMYYlv/Banking--Finance---E-Pay----App-UI--Community-?node-id=2-7669&t=9BHOjfdUlCz6FaU6-0)
+
+![Transfer Screen](./screenshots/Transfer_Screen.jpeg)
