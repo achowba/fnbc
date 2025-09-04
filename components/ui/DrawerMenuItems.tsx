@@ -24,7 +24,7 @@ const DrawerMenuItems = [
     name="transfer"
     options={{
       drawerLabel: 'Transfer',
-      headerTitle: 'Transfer',
+      headerTitle: 'Transfer Money',
       headerShown: true,
       drawerIcon: () => (
         <SvgUri source={ICONS.currency_exchange} width={ICON_WIDTH} height={ICON_HEIGHT} />

@@ -4,6 +4,7 @@ export const ICONS = {
   airtime: require('@/assets/icons/airtime.svg'),
   atm: require('@/assets/icons/atm.svg'),
   bag: require('@/assets/icons/bag.svg'),
+  bank: require('@/assets/icons/bank.svg'),
   bell: require('@/assets/icons/bell.svg'),
   bill: require('@/assets/icons/bill.svg'),
   bolt: require('@/assets/icons/bolt.svg'),

@@ -2,17 +2,18 @@ import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import { Href, Link } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleProp, StyleSheet, Text, TextStyle, View } from 'react-native';
 
 type SectionTitleProps = {
   title: string;
   linkTo?: Href;
+  titleStyle?: StyleProp<TextStyle>;
 };
 
-const SectionTitle = ({ title, linkTo }: SectionTitleProps) => {
+const SectionTitle = ({ title, linkTo, titleStyle }: SectionTitleProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>{title}</Text>
+      <Text style={[styles.titleText, titleStyle!]}>{title}</Text>
       {linkTo && (
         <Link href={linkTo} asChild style={{ textDecorationLine: 'none' }}>
           <Text style={styles.viewAllText}>View All</Text>

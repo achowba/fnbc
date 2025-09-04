@@ -34,9 +34,9 @@ export const DEFAULT_STYLES = StyleSheet.create({
     transform: [{ rotate: '45deg' }],
   },
   blankScreenContainer: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   }
 });
 

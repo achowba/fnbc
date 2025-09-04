@@ -16,7 +16,10 @@ const ButtonPrimaryWithText = ({
   textStyles,
 }: ButtonPrimaryProps) => {
   return (
-    <Pressable style={[styles.buttonPrimary, buttonStyles]} onPress={onPress!}>
+    <Pressable
+      style={({ pressed }) => [styles.buttonPrimary, buttonStyles, pressed && styles.pressed]}
+      onPress={onPress!}
+    >
       <Text style={[styles.buttonText, textStyles]}>{children}</Text>
     </Pressable>
   );
@@ -36,6 +39,9 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 18,
     fontWeight: '600',
+  },
+  pressed: {
+    opacity: 0.7,
   },
 });
 

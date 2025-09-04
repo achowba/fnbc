@@ -4,6 +4,7 @@ import DrawerMenuItems from '@/components/ui/DrawerMenuItems';
 import { COLORS } from '@/constants/colors.constants';
 import { FONTS } from '@/constants/fonts.constants';
 import { User } from '@/data/user.data';
+import { Ionicons } from '@expo/vector-icons';
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
@@ -45,7 +46,8 @@ const DrawerLayout = () => {
           fontSize: 20,
           marginLeft: 12,
         },
-        drawerActiveTintColor: `${COLORS.light.primary}20`,
+        drawerActiveTintColor: COLORS.light.primary,
+        drawerIcon: ({ size }) => <Ionicons name="menu" size={size} color={COLORS.light.primary} />,
       }}
     >
       {DrawerMenuItems}
@@ -55,9 +57,9 @@ const DrawerLayout = () => {
 
 const styles = StyleSheet.create({
   dividerContainer: {
-    padding: 0,
-    marginHorizontal: -20,
     marginBottom: 20,
+    marginHorizontal: -20,
+    padding: 0,
   },
 });
 

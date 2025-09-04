@@ -1,7 +1,7 @@
 import Cards from '@/components/home/Cards';
 import QuickAccess from '@/components/home/QuickAccess';
 import Transactions from '@/components/transactions/Transactions';
-import SearchInput from '@/components/ui/SearchInput';
+import TextInput from '@/components/ui/SearchInput';
 import { QUICK_ACTIONS } from '@/data/actions.data';
 import { CARDS } from '@/data/card.data';
 import { TRANSACTIONS } from '@/data/transactions.data';
@@ -13,7 +13,7 @@ const Home = () => {
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <Cards cards={CARDS} />
       <View style={styles.contentContainer}>
-        <SearchInput />
+        <TextInput />
         <QuickAccess actions={QUICK_ACTIONS} />
         <Transactions transactions={TRANSACTIONS} showSectionTitle />
       </View>

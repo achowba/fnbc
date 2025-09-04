@@ -27,3 +27,10 @@ export type UserType = {
   accountType: string;
   accountsCount: number;
 }
+
+export type BeneficiaryType = {
+  id: number;
+  firstName: string;
+  lastName: string;
+  image: ImageSourcePropType;
+}
